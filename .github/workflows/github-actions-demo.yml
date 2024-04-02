@@ -16,7 +16,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "? This job's status is ${{ job.status }}."
-  Explore-GitHub-Actions1:
+  Explore-GitHub-Actions2:
     check-bats-version:
       runs-on: ubuntu-latest
       steps:
