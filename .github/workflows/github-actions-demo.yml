@@ -19,9 +19,7 @@ jobs:
   Explore-GitHub-Actions2:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code2
       - uses: actions/checkout@v4
-      - name: setup nodejs
       - uses: actions/setup-node@v4
         with:
           node-version: '14'
