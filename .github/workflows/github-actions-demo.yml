@@ -31,5 +31,5 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - nmae: print log
+      - name: print log
         run: echo "finish! ${{ github.event.inputs.name }}"
