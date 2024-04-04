@@ -1,7 +1,10 @@
 name: Learning GitHub Script
 on:
   issues:
-    types: [opened]
+    types: [opened] 
+
+  workflow_dispatch:
+    
 jobs:
   comment:
     runs-on: ubuntu-latest
