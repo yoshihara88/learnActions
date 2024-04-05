@@ -1,0 +1,16 @@
+name: Python Demo
+on:
+    pull_request:
+        branches: [main]
+
+jobs: 
+    pythontest:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - run: echo "repository= ${{github.repository}}"
+            - name: Setup Python
+              uses: actions/setup-python@v4
+            - name: Run Test
+              run: python ./hello.py b
