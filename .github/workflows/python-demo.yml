@@ -18,4 +18,5 @@ jobs:
                 cache: 'pip'
 
             - name: Run Test
-              run: pytest
+              run: pip install pytest
+            - run: pytest
