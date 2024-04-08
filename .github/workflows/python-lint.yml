@@ -14,5 +14,4 @@ jobs:
                 cache: pip
             - run: |
                 pip install flake8
-                echo "::add-matcher::.learnActions/workflows/flake8-problem-matcher.json"
                 flake8
