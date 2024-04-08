@@ -12,6 +12,8 @@ jobs:
               uses: actions/setup-python@v1
               with:
                 cache: pip
-            - run: |
+            - name: Lint    
+              run: |
                 pip install flake8
+                echo "::add-matcher::/.github/workflows/flake8-problem-matcher.json"
                 flake8

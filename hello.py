@@ -8,4 +8,3 @@ elif msg[1] == "c":
 else:
     print(msg[1])
     sys.exit(0)
-
