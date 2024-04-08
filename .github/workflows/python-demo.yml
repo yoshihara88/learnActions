@@ -1,7 +1,10 @@
 name: Python Demo
 on:
     pull_request:
-        branches: [main]
+      types:
+        - opened
+      branches:
+        - "main"
 
 jobs: 
     pythontest:
