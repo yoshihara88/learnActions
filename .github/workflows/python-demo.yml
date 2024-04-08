@@ -14,5 +14,9 @@ jobs:
             - run: echo "repository= ${{github.repository}}"
             - name: Setup Python
               uses: actions/setup-python@v4
+              with:
+                cache: 'pip'
+
             - name: Run Test
-              run: python ./hello.py b
+              run: pip install pytest
+            - run: pytest
