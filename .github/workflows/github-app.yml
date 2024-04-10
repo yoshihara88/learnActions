@@ -23,9 +23,9 @@ jobs:
             - name: Checkout Provate Repository
               uses: actions/checkout@v4
               with:
-                 repository: yoshihara88/skills-test-with-actions
-                 path: ./skills-test-with-actions
+                 repository: yoshihara88/skills-publish-packages
+                 path: ./skills-publish-packages
               #   token: ${TOKEN}
             - name: ls
-              run: ls ./skills-test-with-actions
+              run: ls ./skills-publish-packages
 
