@@ -18,7 +18,7 @@ jobs:
               run: echo "the generated token is masked ${TOKEN}"
             - name: checkout
               uses: actions/checkout@v4
-            - run: ls ./learnActions
+            - run: ls
               
             - name: Checkout Provate Repository
               uses: actions/checkout@v4
