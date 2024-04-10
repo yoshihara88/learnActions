@@ -23,8 +23,8 @@ jobs:
             - name: Checkout Provate Repository
               uses: actions/checkout@v4
               with:
-                 repository: yoshihara88/sample-private
-                 path: ./sample-private
+                 repository: yoshihara88/skills-test-with-actions
+                 path: ./skills-test-with-actions
               #   token: ${TOKEN}
             - name: ls
               run: ls ./sample-private
