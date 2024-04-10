@@ -27,5 +27,5 @@ jobs:
                  path: ./skills-test-with-actions
               #   token: ${TOKEN}
             - name: ls
-              run: ls ./sample-private
+              run: ls ./skills-test-with-actions
 
