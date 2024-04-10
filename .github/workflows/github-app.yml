@@ -20,12 +20,12 @@ jobs:
               uses: actions/checkout@v4
             - run: ls
               
-            - name: Checkout Provate Repository
+            - name: Checkout Private Repository
               uses: actions/checkout@v4
               with:
                  repository: yoshihara88/sample-private
                  path: ./sample-private
-                 token: ${TOKEN}
+                 token: ${{steps.generate_token.outputs.token}}
             - name: ls
               run: ls ./sample-private
 
