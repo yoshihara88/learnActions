@@ -1,0 +1,36 @@
+name: Github App
+on: 
+    push:
+    workflow_dispatch:
+
+jobs:
+    github_app:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Generate token
+              id: generate_token
+              uses: actions/create-github-app-token@v1
+              with:
+                app-id: ${{secrets.APP_ID}}
+                private_key: ${{secrets.PRIVATE_KEY}}
+
+            - name: Use token
+              env:
+                TOKEN: ${{steps.generate_token.outputs.token}}
+              run: echo "the generated token is masked ${TOKEN}"
+
+            - name: checkout
+              uses: actions/checkout@v4
+            - run: ls
+              
+            - name: Checkout Private Repository
+              uses: actions/checkout@v4
+              with:
+                 repository: yoshihara88/sample-private
+                 ref: main
+                 token: ${{ steps.generate_token.outputs.token }}
+                 persist-credentials: false
+
+            - name: ls Command
+              run: ls ./sample-private
+
