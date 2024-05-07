@@ -8,7 +8,6 @@
 # deps
 require 'octokit'
 require 'yaml'
-require './helpers'
 
 existing_members = YAML.load_file('existing_members.yml')
 new_member = { name: 'New Member', age: 25, role: 'Developer' }

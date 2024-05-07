@@ -1,6 +1,5 @@
 name: Github App
 on: 
-    push:
     workflow_dispatch:
 
 jobs:
