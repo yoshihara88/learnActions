@@ -1,0 +1,18 @@
+name: 'ruby test'
+
+on:
+  push:
+
+jobs:
+  ruby-test:
+    name: "ruby-test"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: |
+          sudo gem install octokit yaml
+      - name: ruby run
+        run: |
+          cd src
+          ./members.rb
